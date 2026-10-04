@@ -23,6 +23,12 @@ JaUI/
 今後、仕様と実装の変更を同じコミットで追跡し、関連する仕様へのリンクを実装やテストに記載します。
 テスト構成はコンポーネント実装と合わせて追加します。
 
+## 設計原則
+
+[JaUI Design Principles v0.1](./specs/core/design-principles.md)は、
+JaUIの設計・仕様策定・実装・レビューにおける最上位の判断基準です。
+Core Specificationをはじめとする下位の仕様・設計判断は、この原則に基づきます。
+
 ## 開発環境の準備
 
 - Node.js: **24.21.0**（`.nvmrc`と`package.json`の`engines`で固定）
