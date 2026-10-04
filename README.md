@@ -29,6 +29,12 @@ JaUI/
 JaUIの設計・仕様策定・実装・レビューにおける最上位の判断基準です。
 Core Specificationをはじめとする下位の仕様・設計判断は、この原則に基づきます。
 
+## Core Specification
+
+[JaUI Core Specification](./specs/core/core-specification.md)は、Design Principlesに基づき、
+全コンポーネント・パターン・Reference Implementationに共通する横断的な要求を定義する文書です。
+現在はVersion 0.1.0 / Status Draftの文書骨格を整備しており、個々のCore要求は後続Issueで追加します。
+
 ## 開発環境の準備
 
 - Node.js: **24.21.0**（`.nvmrc`と`package.json`の`engines`で固定）
