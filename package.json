@@ -2,10 +2,10 @@
   "name": "jaui",
   "private": true,
   "license": "MIT",
-  "packageManager": "pnpm@10.34.6",
+  "packageManager": "pnpm@12.8.1",
   "engines": {
     "node": "24.21.0",
-    "pnpm": "10.34.6"
+    "pnpm": "12.8.1"
   },
   "scripts": {
     "build": "pnpm -r build",

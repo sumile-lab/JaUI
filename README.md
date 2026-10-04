@@ -26,7 +26,9 @@ JaUI/
 ## 開発環境の準備
 
 - Node.js: **24.21.0**（`.nvmrc`と`package.json`の`engines`で固定）
-- pnpm: **10.34.6**（`packageManager`と`engines`で固定）
+- pnpm: **12.8.1**（`packageManager`と`engines`で固定）
+- TypeScript: **7.0.2**（`packages/core/package.json`で固定）
+- Lit: **3.3.3**（`packages/core/package.json`で固定）
 
 Node.jsのバージョンマネージャー（例: nvm）をあらかじめ用意し、fresh clone後に以下を実行します。
 
@@ -35,7 +37,7 @@ git clone https://github.com/sumile-lab/JaUI.git
 cd JaUI
 nvm install
 nvm use
-npm install --global pnpm@10.34.6
+npm install --global pnpm@12.8.1
 pnpm install --frozen-lockfile
 ```
 
@@ -59,9 +61,15 @@ pnpm list -r --depth 0           # workspaceと依存関係を確認
 `pnpm dev`はTypeScriptのwatchモードです。ブラウザー用の開発サーバーはまだありません。
 
 TypeScriptはstrictモードとES modulesを使用します。
+ブラウザー向けのReference Implementationとして、`module: ESNext`と
+`moduleResolution: Bundler`を使用します。ES modulesを保持し、パッケージの
+`exports`を解決しつつ、Node.js固有の解決規則を前提にしない設定です
+（[TypeScript公式ドキュメント](https://www.typescriptlang.org/tsconfig/moduleResolution.html)）。
+バンドラーはまだ導入しておらず、将来のブラウザー向けビルド構成で選定します。
 Litのexperimental decoratorsを利用できるよう、`experimentalDecorators: true`と
 `useDefineForClassFields: false`を設定しています（[Lit公式ドキュメント](https://lit.dev/docs/components/decorators/)）。
-パッケージ内の相対importには、出力先に対応する`.js`拡張子を付けてください。
+相対importの拡張子はこの設定では必須ではありませんが、現在のビルドはバンドルせずに
+出力するため、ブラウザーで直接読み込む相対importには出力先に対応する`.js`拡張子を付けてください。
 `src/index.ts`は将来の公開API用の空のエントリーポイントです。
 
 ## ライセンス
