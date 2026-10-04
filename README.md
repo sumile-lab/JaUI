@@ -33,7 +33,7 @@ Core Specificationをはじめとする下位の仕様・設計判断は、こ�
 
 [JaUI Core Specification](./specs/core/core-specification.md)は、Design Principlesに基づき、
 全コンポーネント・パターン・Reference Implementationに共通する横断的な要求を定義する文書です。
-現在はVersion 0.1.0 / Status Draftで、最初のCore要求としてWeb標準を基盤とする`JAUI-WEB-001`を定義しています。
+現在はVersion 0.1.0 / Status Draftで、Web標準を基盤とする`JAUI-WEB-001`と、意味・セマンティクスを優先する`JAUI-WEB-002`を定義しています。
 その他のCore要求は後続Issueで段階的に追加します。
 
 ## 開発環境の準備
