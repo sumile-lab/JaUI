@@ -43,6 +43,7 @@ pnpm install --frozen-lockfile
 
 nvmを使用しない場合も、Node.js 24.21.0をインストールしてから同じpnpmの準備・依存関係のインストールを実行してください。
 `.npmrc`でNode.js / pnpmの指定バージョンを検証します。依存関係の更新時は`pnpm install`でlockfileも更新してください。
+固定しているpnpm 12.8.1は、pnpm自身とプロジェクトの依存関係を2つのYAML文書として`pnpm-lock.yaml`に記録します。これはpnpmが生成する正規の形式です。
 
 ## 開発コマンド
 
