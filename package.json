@@ -1,0 +1,15 @@
+{
+  "name": "jaui",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@10.34.6",
+  "engines": {
+    "node": "24.21.0",
+    "pnpm": "10.34.6"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "dev": "pnpm --filter @jaui/core dev"
+  }
+}
